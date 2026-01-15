@@ -2,41 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>System Monitor Dashboard</title>
+  <title>System Monitor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="./assets/icons/logo.png">
   <link rel="stylesheet" href="./assets/css/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
+
+  <video autoplay muted loop class="bg-video">
+    <source src="./assets/icons/backgroundvideo2.mp4" type="video/mp4">
+  </video>
 
   <header class="header">
     <h1>System Monitor</h1>
-    <p>Real-time system metrics simulation</p>
+    <p>Real-time system metrics</p>
   </header>
 
   <main class="dashboard">
 
     <section class="card">
-      <h2>CPU Usage</h2>
+      <h2>CPU</h2>
       <canvas id="cpuChart"></canvas>
       <span class="status" id="cpuStatus"></span>
     </section>
 
     <section class="card">
-      <h2>Memory Usage</h2>
+      <h2>Memory</h2>
       <canvas id="memoryChart"></canvas>
       <span class="status" id="memoryStatus"></span>
     </section>
 
     <section class="card">
-      <h2>Disk Usage</h2>
+      <h2>Disk</h2>
       <canvas id="diskChart"></canvas>
       <span class="status" id="diskStatus"></span>
     </section>
 
     <section class="card">
-      <h2>Network I/O</h2>
+      <h2>Network</h2>
       <canvas id="networkChart"></canvas>
       <span class="status" id="networkStatus"></span>
     </section>
@@ -50,3 +55,4 @@
 
 </body>
 </html>
+

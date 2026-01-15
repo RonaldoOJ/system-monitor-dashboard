@@ -2,20 +2,22 @@ function createChart(ctx, label, initialValue) {
   return new Chart(ctx, {
     type: 'line',
     data: {
-      labels: Array(10).fill(''),
+      labels: Array(12).fill(''),
       datasets: [{
-        label,
-        data: Array(10).fill(initialValue),
-        borderColor: '#3b82f6',
-        tension: 0.4
+        data: Array(12).fill(initialValue),
+        borderColor: '#0a84ff',
+        borderWidth: 2,
+        tension: 0.45,
+        fill: false
       }]
     },
     options: {
       plugins: { legend: { display: false } },
       scales: {
         x: { display: false },
-        y: { min: 0, max: 100 }
+        y: { min: 0, max: 100, ticks: { color: '#aaa' } }
       }
     }
   });
 }
+

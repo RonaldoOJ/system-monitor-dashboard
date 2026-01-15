@@ -7,6 +7,6 @@ const metrics = {
 
 function simulateMetric(value, max = 100) {
   const change = Math.random() * 6 - 3;
-  let newValue = value + change;
-  return Math.min(Math.max(newValue, 0), max);
+  return Math.min(Math.max(value + change, 0), max);
 }
+

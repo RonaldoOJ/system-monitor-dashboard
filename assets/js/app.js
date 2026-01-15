@@ -1,26 +1,7 @@
-const cpuChart = createChart(
-  document.getElementById('cpuChart'),
-  'CPU',
-  metrics.cpu
-);
-
-const memoryChart = createChart(
-  document.getElementById('memoryChart'),
-  'Memory',
-  metrics.memory
-);
-
-const diskChart = createChart(
-  document.getElementById('diskChart'),
-  'Disk',
-  metrics.disk
-);
-
-const networkChart = createChart(
-  document.getElementById('networkChart'),
-  'Network',
-  metrics.network
-);
+const cpuChart = createChart(cpuChartCanvas = document.getElementById('cpuChart'), 'CPU', metrics.cpu);
+const memoryChart = createChart(document.getElementById('memoryChart'), 'Memory', metrics.memory);
+const diskChart = createChart(document.getElementById('diskChart'), 'Disk', metrics.disk);
+const networkChart = createChart(document.getElementById('networkChart'), 'Network', metrics.network);
 
 setInterval(() => {
   metrics.cpu = simulateMetric(metrics.cpu);
@@ -41,6 +22,6 @@ function update(chart, value, statusId) {
 
   const status = getStatus(value);
   const el = document.getElementById(statusId);
-  el.textContent = `${status.text} (${value.toFixed(1)}%)`;
+  el.textContent = `${status.text} — ${value.toFixed(1)}%`;
   el.style.color = status.color;
 }
